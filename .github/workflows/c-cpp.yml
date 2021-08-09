@@ -1,0 +1,23 @@
+name: Build GCC on Windows
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: configure
+      run: |
+        "C:\\Program Files\\Git\\bin\\bash.exe"
+        ./configure
+    - name: make
+      run: |
+        "C:\\Program Files\\Git\\bin\\bash.exe"
+        make
