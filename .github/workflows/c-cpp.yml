@@ -14,10 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: configure
-      run: |
-        gitbash.exe
-        ./configure
+      run: gitbash.exe; ./configure
     - name: make
-      run: |
-        gitbash.exe
-        make
+      run: gitbash.exe; make
